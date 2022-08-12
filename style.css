@@ -1,0 +1,32 @@
+.container {
+	text-align: center;
+}
+span {
+	margin: 30px;
+	font-size: 40px;
+	font-weight: bold;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+		Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+#userScoreBox {
+	box-sizing: border-box;
+	padding: 30px;
+	min-height: 100px;
+	min-width: 100px;
+	display: inline-block;
+	background: rgb(77, 228, 77);
+	font-size: medium;
+
+	text-align: center;
+}
+#computerScoreBox {
+	box-sizing: border-box;
+	padding: 30px;
+	min-height: 100px;
+	min-width: 100px;
+	display: inline-block;
+	background: red;
+	font-size: medium;
+
+	text-align: center;
+}
