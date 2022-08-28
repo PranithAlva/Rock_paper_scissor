@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>Game</title>
+		<script src="main.js" defer></script>
 		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
@@ -12,10 +13,20 @@
 			<span>You</span>
 			<span>Computer</span>
 			<br />
-			<span id="userScoreBox"></span>
-			<span id="computerScoreBox"></span>
-			<p id="result">Hello World!!</p>
+			<span id="userScoreBox">0</span>
+			<span id="computerScoreBox">0</span>
+			<p id="result"></p>
+			<div id="board">
+				<h1 id="winner-board"></h1>
+			</div>
+
+			<div id="controls">
+				<div class="keys"><button id="rock">Rock</button></div>
+				<div class="keys"><button id="paper">Paper</button></div>
+				<div class="keys"><button id="scissor">Scissor</button></div>
+			</div>
+			<hr />
+			<div id="match-outcomes"></div>
 		</div>
-		<script src="main.js"></script>
 	</body>
 </html>
