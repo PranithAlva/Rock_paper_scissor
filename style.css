@@ -1,5 +1,6 @@
 .container {
 	text-align: center;
+	scroll-behavior: smooth;
 }
 span {
 	margin: 30px;
@@ -29,4 +30,80 @@ span {
 	font-size: medium;
 
 	text-align: center;
+}
+
+#controls {
+	box-sizing: border-box;
+	margin: auto;
+	padding: 100px;
+	max-height: 400px;
+	background: linear-gradient(200deg, plum 40%, rgb(124, 246, 255));
+	max-width: 440px;
+	border-radius: 50%;
+}
+
+.keys {
+	box-sizing: border-box;
+	display: inline-block;
+}
+
+button {
+	box-sizing: border-box;
+	height: 100px;
+	width: 100px;
+	border-radius: 50%;
+	margin: 5px;
+	font-size: 20px;
+	cursor: pointer;
+}
+
+#scissor {
+	border: 5px solid red;
+	color: red;
+}
+
+#scissor:hover {
+	border: 10px solid red;
+}
+
+#scissor:active {
+	border: 5px solid white;
+	background-color: red;
+	color: white;
+	font-size: 25px;
+}
+
+#rock {
+	border: 5px solid goldenrod;
+	color: goldenrod;
+}
+#rock:hover {
+	border: 10px solid goldenrod;
+}
+#rock:active {
+	border: 5px solid white;
+	background-color: goldenrod;
+	color: white;
+	font-size: 25px;
+}
+
+#paper {
+	border: 5px solid green;
+	color: green;
+}
+#paper:hover {
+	border: 10px solid green;
+}
+
+#paper:active {
+	border: 5px solid white;
+	background-color: green;
+	color: white;
+	font-size: 25px;
+}
+
+#winner-board {
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+		Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+	text-decoration-line: line-through;
 }
