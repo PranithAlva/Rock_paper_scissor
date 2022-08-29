@@ -17,7 +17,7 @@ span {
 	display: inline-block;
 	background: rgb(77, 228, 77);
 	font-size: medium;
-
+	box-shadow: -5px 5px 10px 4px gray;
 	text-align: center;
 }
 #computerScoreBox {
@@ -28,7 +28,7 @@ span {
 	display: inline-block;
 	background: red;
 	font-size: medium;
-
+	box-shadow: 5px 5px 10px 4px gray;
 	text-align: center;
 }
 

@@ -4,16 +4,17 @@ author:Pranith
 
 //reset button
 function resetStatus() {
-	document.getElementById("userScoreBox").innerText = 0;
-	document.getElementById("computerScoreBox").innerText = 0;
-	let winnerBox = document.querySelector("#board");
+	document.getElementById("userScoreBox").innerText = "0";
+	document.getElementById("computerScoreBox").innerText = "0";
+	let board = document.querySelector("#board");
 	let reset = document.getElementById("reset");
-	winnerBox.removeChild(reset);
+	board.removeChild(reset);
 	let matchOutcome = document.getElementById("match-outcomes");
 	matchOutcome.textContent = "";
 	let result = document.querySelector("#result");
-	result.textContent = null;
-	winnerBox.textContent = null;
+	result.textContent = "";
+	let winnerBox = document.querySelector("#winner-board");
+	winnerBox.textContent = "";
 }
 
 //display reset button
@@ -35,9 +36,11 @@ function addResetButton() {
 //function to check who has reached five points
 function checkWinner() {
 	userScore = Number(document.getElementById("userScoreBox").textContent);
+	console.log(userScore);
 	computerScore = Number(
 		document.getElementById("computerScoreBox").textContent
 	);
+	console.log(computerScore);
 	if (userScore == 5) {
 		document.getElementById("winner-board").innerText = "You win!!!";
 		addResetButton();
