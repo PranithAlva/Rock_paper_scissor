@@ -2,6 +2,7 @@
 author:Pranith
  */
 
+let game_end = false;
 //reset button
 function resetStatus() {
 	document.getElementById("userScoreBox").innerText = "0";
@@ -15,6 +16,7 @@ function resetStatus() {
 	result.textContent = "";
 	let winnerBox = document.querySelector("#winner-board");
 	winnerBox.textContent = "";
+	game_end = false;
 }
 
 //display reset button
@@ -44,10 +46,12 @@ function checkWinner() {
 	if (userScore == 5) {
 		document.getElementById("winner-board").innerText = "You win!!!";
 		addResetButton();
+		game_end = true;
 	}
 	if (computerScore == 5) {
 		document.getElementById("winner-board").innerText = "You Loose!!! :-(";
 		addResetButton();
+		game_end = true;
 	}
 }
 
@@ -98,13 +102,24 @@ function playRound(playerSelection) {
 
 /*game function */
 function game(keys) {
-	playRound(keys);
-	checkWinner();
+	if (game_end != true) {
+		playRound(keys);
+		checkWinner();
+	}
 }
 
+//add event listener
 const keys = document.querySelectorAll("button");
-keys.forEach((keys) => {
-	keys.addEventListener("click", () => {
-		game(keys.id);
-	});
+keys.forEach((key) => {
+	key.addEventListener("click", () => game(key.id));
 });
+
+/*
+keys.forEach((key) => {
+	key.addEventListener("click", game(key.id));
+});
+
+if we do this it dosnot works because whenver we call function by () it simply executes
+the function so we either go by arrow function or anynomous function
+https://stackoverflow.com/questions/70920592/why-does-a-javascript-event-listener-function-need-to-be-wrapped-in-function-tag 
+*/
